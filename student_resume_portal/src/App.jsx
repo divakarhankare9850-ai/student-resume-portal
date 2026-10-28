@@ -497,9 +497,6 @@ export default function App() {
               {busy ? 'Please wait…' : 'Upload resume'}
             </button>
           </form>
-          <div className="privacy-foot">
-            <LockKeyhole size={14} />
-          </div>
         </section>
       )}
 
