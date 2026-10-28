@@ -499,10 +499,6 @@ export default function App() {
           </form>
           <div className="privacy-foot">
             <LockKeyhole size={14} />
-            <span>
-              Resumes are stored in a private bucket. Access is restricted by
-              server-side validation and administrator permissions.
-            </span>
           </div>
         </section>
       )}
@@ -546,11 +542,6 @@ export default function App() {
               {busy ? 'Signing in…' : 'Sign in to dashboard'}
             </button>
           </form>
-          <p className="login-hint">
-            Create the admin user in Supabase Authentication, then insert their
-            user ID into the <code>admin_users</code> table using the SQL
-            Editor.
-          </p>
         </section>
       )}
 
