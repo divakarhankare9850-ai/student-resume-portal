@@ -4,10 +4,12 @@ const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
 if (!supabaseUrl || !supabaseAnonKey) {
-  console.warn("Supabase config missing. Copy .env.example to .env and add your project values.");
+  throw new Error(
+    "Supabase configuration is missing. Check your Vercel environment variables."
+  );
 }
 
 export const supabase = createClient(
-  supabaseUrl || "https://example.supabase.co",
-  supabaseAnonKey || "missing-anon-key"
+  supabaseUrl,
+  supabaseAnonKey
 );
